@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>SMILE!</title>    
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+      <svg width="1000" height="1000">
+  <circle cx="50" cy="150" r="50"></circle>
+  <circle cx="200" cy="100" r="40"></circle>
+  <circle cx="300" cy="200" r="30"></circle>
+          <!--<arc cx="300" cy="70" r="50"></arc> <-->
+      </svg>
+      
+      <!--
+          <svg viewBox = "0 0 1100 400" version = "1.1">
+    <g stroke = "black" stroke-width = "3" fill = "none">
+        <path d = "M 50 200 a 100 50 0 1 1 250 50"/>
+              </g>
+      </svg> -->
+      
+    <script type="text/javascript">
+      var smiles = [
+        {r:50, x: 50, y: 150}, 
+        {r:40, x: 200, y: 100},
+        {r:30, x: 300, y: 200}
+      ];
+        
+        var svgContainer = d3.select("body").append("svg")
+                                     .attr("width", 200)
+                                     .attr("height", 200);
+ 
+ //Draw the Rectangle
+        
+        /*//////////CAN'T FIGURE OUT HOW TO MOVE ANYTHING BELOW THE CIRCLES UP//////////////////////*/
+        
+ var rectangle = svgContainer.append("rect")
+                            .attr("x", 100)                        .attr("y", 0)
+                           .attr("width", 10)                            .attr("height", 30)
+ .attr("transform", "translate(0,0)"); //eye 1
+        
+        
+        
+        var rectangle = svgContainer.append("rect")
+                            .attr("x", 50)                        .attr("y", 00)
+                           .attr("width", 10)                            .attr("height", 30)
+ .attr("transform", "translate(0,0)"); //eye 2
+    
+        
+        
+        
+        
+        
+        /* d3.select("body").transition()
+    .style("background-color", "black"); */
+        
+        var vis = d3.select("body").append("svg") //for the circle
+       
+        var pi = Math.PI;
+    
+/*var arc = d3.svg.arc()
+    .innerRadius(50)
+    .outerRadius(70)
+    .startAngle(45 * (pi/180)) //converting from degs to radians
+    .endAngle(3) //just radians
+    
+vis.attr("width", "400").attr("height", "400") // Added height and width so arc is visible
+    .append("path")
+    .attr("d", arc)
+    .attr("fill", "red")
+    .attr("transform", "translate(300,70)");
+
+
+
+        */
+        
+        
+        
+        var circle = d3.selectAll("circle");
+        circle.style("fill", "#ffff33");
+    
+        
+        
+        
+    </script>
+
+  </body>
+</html>
